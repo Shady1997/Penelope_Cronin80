@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.943">
-<testcase classname="Feature to test create user endpoint" name="Add New User with Valid Parameters" time="17.436">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="16.053">
+<testcase classname="Feature to test create user endpoint" name="Add New User with Valid Parameters" time="14.472">
 <system-out><![CDATA[Given having endpoint to ceate new user.....................................passed
 When Send valid data in request body using post method......................passed
 Then Status code of response should be 201..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Feature to test create user endpoint" name="Get Created User by user id" time="1.169">
+<system-out><![CDATA[Given Create request user and have user id..................................passed
+When Send request with user id using get method.............................passed
+Then Status code of response should be 200..................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
