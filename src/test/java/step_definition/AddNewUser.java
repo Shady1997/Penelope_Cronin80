@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import utilites.GenerateData;
 
@@ -37,7 +38,7 @@ public class AddNewUser
         // Step 1: Call Endpoint and Store Response in Response Object
         rquestResponse= RestAssured.given().baseUri(baseUri).basePath(basePath).header("Content-Type",requestHeader).body(requestBody).when().post();
         // Step 2: print response
-        rquestResponse.prettyPrint();
+//        rquestResponse.prettyPrint();
     }
 
     @Then("Status code of response should be 201")
@@ -68,6 +69,7 @@ public class AddNewUser
     }
     @When("Send request with user id using get method")
     public void sendRequestWithUserIdUsingGetMethod() {
+        System.out.println(temp);
         rquestResponse=RestAssured.given().baseUri(baseUri).basePath(basePath).queryParam("id",temp).when().get();
         rquestResponse.prettyPrint();
     }
